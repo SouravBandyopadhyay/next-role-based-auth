@@ -34,7 +34,10 @@ npm install
  - Generate Random Key
 ```
 
+```
 openssl rand -base64 32
+
+```
 
 ```
 
