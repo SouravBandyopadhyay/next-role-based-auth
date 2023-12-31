@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -38,45 +41,42 @@ const UserForm = () => {
       <form
         method="post"
         onSubmit={handleSubmit}
-        className="flex flex-col gap-3 w-1/2 "
+        className="flex flex-col gap-3 w-1/2"
       >
         <h1>Create New User</h1>
-        <label>Full Name</label>
-        <input
+        <Label htmlFor="name">Full Name</Label>
+        <Input
           type="text"
           id="name"
           name="name"
           onChange={handleChange}
           required
           value={formData.name}
-          className="m-2 bg-slate-400 rounded"
+          className="m-2rounded"
         />
-        <label>Email</label>
-        <input
+        <Label htmlFor="email">Email</Label>
+        <Input
           type="email"
           id="email"
           name="email"
           onChange={handleChange}
           required
           value={formData.email}
-          className="m-2 bg-slate-400 rounded"
+          className="m-2 rounded"
         />
-        <label>Password</label>
-        <input
+        <Label htmlFor="password">Password</Label>
+        <Input
           type="password"
           id="password"
           name="password"
           onChange={handleChange}
           required
           value={formData.password}
-          className="m-2 bg-slate-400 rounded"
+          className="m-2 rounded"
         />
-        <button
-          type="submit"
-          className="bg-blue-300 hover:bg-blue-100"
-        >
+        <Button type="submit" className="m-2  bg-blue-300 hover:bg-blue-100">
           Create User
-        </button>
+        </Button>
       </form>
       <p className="text-red-500">{errorMessage}</p>
     </>
