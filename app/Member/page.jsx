@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 const Member = async () => {
   const session = await getServerSession(options);
-  console.log(session)
+  // console.log(session)
 
   // NOTE : If no session found redirect
   if (!session) {

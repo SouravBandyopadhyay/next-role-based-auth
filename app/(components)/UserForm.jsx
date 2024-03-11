@@ -37,13 +37,13 @@ const UserForm = () => {
     }
   };
   return (
-    <>
+    <div className="flex flex-col items-center justify-center">
       <form
         method="post"
         onSubmit={handleSubmit}
-        className="flex flex-col gap-3 w-1/2"
+        className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md"
       >
-        <h1>Create New User</h1>
+        <h1 className="text-3xl text-center mb-8 font-bold">Create New User</h1>
         <Label htmlFor="name">Full Name</Label>
         <Input
           type="text"
@@ -52,7 +52,7 @@ const UserForm = () => {
           onChange={handleChange}
           required
           value={formData.name}
-          className="m-2rounded"
+          className="input-field m-2 rounded"
         />
         <Label htmlFor="email">Email</Label>
         <Input
@@ -62,7 +62,7 @@ const UserForm = () => {
           onChange={handleChange}
           required
           value={formData.email}
-          className="m-2 rounded"
+          className="input-field m-2 rounded"
         />
         <Label htmlFor="password">Password</Label>
         <Input
@@ -72,14 +72,14 @@ const UserForm = () => {
           onChange={handleChange}
           required
           value={formData.password}
-          className="m-2 rounded"
+          className="input-field m-2 rounded"
         />
         <Button type="submit" className="m-2  bg-blue-300 hover:bg-blue-100">
           Create User
         </Button>
       </form>
       <p className="text-red-500">{errorMessage}</p>
-    </>
+    </div>
   );
 };
 
