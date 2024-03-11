@@ -9,7 +9,7 @@ const Denied = () => {
           Access Denied
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-          You don't have permission to access this page.
+          You don&apos;t have permission to access this page.
         </p>
         <Link href="/" className="text-blue-600 hover:underline">
           Go back to Home
