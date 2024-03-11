@@ -20,7 +20,7 @@ const UserForm = () => {
   };
 
   const handleSubmit = async (event) => {
-    console.log(formData);
+    // console.log(formData);
     event.preventDefault();
     setErrorMessage("");
     const response = await fetch("/api/Users", {
