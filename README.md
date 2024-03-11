@@ -39,10 +39,6 @@ openssl rand -base64 32
 
 ```
 
-```
-
-```
-
 ### Additional Notes
 - Github login: By default, GitHub login is configured as admin login.
 - Google User or Created User by Admin: Members can sign up using Google account or via manual registration by the admin.
