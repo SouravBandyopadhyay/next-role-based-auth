@@ -39,7 +39,7 @@ export const LoginEmail: React.FC<LoginEmailProps> = ({ firstName, email }) => {
           />
           <Text style={paragraph}>Hi {firstName},</Text>
           <Text style={paragraph}>
-            Welcome to Next-Auth-Project, we're glad to have you back. Your email is{" "}
+            Welcome to Next-Auth-Project, we`&apos;`re glad to have you back. Your email is{" "}
             {email}
           </Text>
           <Section style={btnContainer}>
