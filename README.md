@@ -28,6 +28,7 @@ npm install
 
 ### Reference
  - https://www.youtube.com/watch?v=MNm1XhDjX1s
+ - https://dev.to/mfts/how-to-send-a-warm-welcome-email-with-resend-next-auth-and-react-email-576f
 
 
 ### NOTE

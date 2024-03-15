@@ -4,6 +4,7 @@ import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import User from "@/app/(models)/User";
 import bcrypt from "bcrypt";
+import sendLoginNotification from "../../send/route";
 
 export const options = {
   providers: [
@@ -31,11 +32,11 @@ export const options = {
       profile(profile) {
         console.log("Google Profile", profile);
         let userRole = "Google User";
-        console.log({
-          ...profile,
-          id: profile.sub,
-          role: userRole,
-        });
+        // console.log({
+        //   ...profile,
+        //   id: profile.sub,
+        //   role: userRole,
+        // });
         return {
           ...profile,
           id: profile.sub,
@@ -96,6 +97,27 @@ export const options = {
     async session({ session, token }) {
       if (session?.user) session.user.role = token.role;
       return session;
+    },
+  },
+  events: {
+    // async createUser(message) {
+    //   const params = {
+    //     user: {
+    //       name: message.user.name,
+    //       email: message.user.email,
+    //     },
+    //   };
+    //   await sendLoginNotification(params); // <-- send welcome email
+    // },
+
+    async signIn(user) {
+      const params = {
+        user: {
+          name: user.user.name,
+          email: user.user.email,
+        },
+      };
+      await sendLoginNotification(params); // <-- send welcome email
     },
   },
 };
