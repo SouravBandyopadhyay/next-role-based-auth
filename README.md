@@ -7,7 +7,9 @@ This is a starter template for a Next.js project with Shadcn (Auth0) and Tailwin
 - **Next.js**: A React framework for building web applications.
 - **Shadcn (Auth0)**: Secure and scalable authentication and authorization platform.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Role-Based Authentication**: Implement user roles for controlling access to different parts of your application.
+- **Role-Based Authentication**: Implement user roles for controlling access to different parts 
+of your application.
+- **Resend**: For Sending Email Notifications.
 
 ## Getting Started
 
